@@ -1,0 +1,118 @@
+/*stars animation*/
+@keyframes stars{
+	from{opacity: 0.4;}
+	to  {opacity: 0.1;}
+}
+
+@-webkit-keyframes stars{
+	from{opacity: 1;}
+	to  {opacity: 0.1;}
+}
+@-moz-keyframes stars{
+	from{opacity: 1;}
+	to  {opacity: 0.1;}
+}
+@-o-keyframes stars{
+	from{opacity: 1;}
+	to  {opacity: 0.1;}
+}
+
+/*sun animation*/
+@keyframes sun{
+	from{box-shadow: 0 0 50px #f5c91a;}
+	to  {box-shadow: 0 0 100px 20px #f5c91a;}
+}
+
+/*Rotate animation*/
+@keyframes spin{
+	from{transform: rotate(0); }
+	to  {transform: rotate(360deg);}
+}
+
+
+html,body{
+	height: 100%;
+	width: 100%;
+}
+
+#universe{
+	background: black;
+	background: -webkit-radial-gradient(#555,#000);
+	background: -moz-radial-gradient(#555,#000);
+	background: -o-radial-gradient(#555,#000);
+	background: radial-gradient(#555,#000);
+}
+
+#stars{
+	position: relative;
+	z-index: 2;
+	height: 100%;
+	width: 100%;
+	background: url('star6.png');
+	opacity: 0.4;
+	animation: stars 4s infinite alternate;
+	-webkit-animation: stars 4s infinite alternate;
+	-moz-animation: stars 4s infinite alternate;
+	-o-animation: stars 4s infinite alternate;
+}
+
+#sun{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -100px;
+	margin-left: -100px;
+	border-radius: 100%;
+	height: 200px;
+	width: 200px;
+	background: orange;
+	background: -webkit-radial-gradient(#f5c313,#ec7e08);
+	background: -moz-radial-gradient(#f5c313,#ec7e08);
+	background: -o-radial-gradient(#f5c313,#ec7e08);
+	background: radial-gradient(#f5c313,#ec7e08);
+
+	box-shadow: 0 0 50px #f5c91a;
+	animation: sun 4s infinite alternate;
+}
+
+#earthOrbit{
+	/*border: solid 1px red;*/
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -450px;
+	margin-left: -450px;
+	border-radius: 100%;
+	height: 1000px;
+	width: 900px;
+	animation: spin 30s linear infinite;
+}
+
+#earth{
+	position: absolute;
+	top: 50%;
+	left: 0;
+	margin-top: -67px;
+	animation: spin 30s linear infinite; 
+}
+
+#moonOrbit{
+	/*border: solid 1px red;*/
+	height: 180px;
+	width: 180px;
+	position: absolute;
+	z-index: 4;
+	top: 50%;
+	left: -20px;
+	margin-top: -90px;
+	border-radius: 100%;
+	animation: spin 5s linear infinite reverse;
+}
+
+#moon{
+	height: 20px;
+	width: 20px;
+	background: gray;
+	background: radial-gradient(#ddd,#888);
+	border-radius: 100%;
+}
